@@ -43,6 +43,7 @@ WORKDIR /workspace
 
 COPY requirements.txt /tmp/requirements.txt
 RUN uv pip install --no-cache -r /tmp/requirements.txt && \
+    python3 -m ipykernel install --prefix /opt/venv --name python3 --display-name "Python 3.15 (PySpark 4.2 + Delta Lake 4.4)" && \
     python3 -m ipykernel install --prefix /usr/local --name python3 --display-name "Python 3.15 (PySpark 4.2 + Delta Lake 4.4)" && \
     python3 -c "import shutil; from pyspark.sql import SparkSession; \
     spark = SparkSession.builder \

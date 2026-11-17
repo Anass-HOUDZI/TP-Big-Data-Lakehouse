@@ -10,7 +10,6 @@
     "ms-vscode-remote.remote-containers",
     "ms-azuretools.vscode-docker",
     "task.vscode-task",
-    "hverlin.mise-vscode",
     "mechatroner.rainbow-csv",
     "redhat.vscode-xml",
     "redhat.vscode-yaml"

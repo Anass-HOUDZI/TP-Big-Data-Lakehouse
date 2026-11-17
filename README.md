@@ -121,8 +121,17 @@ docker compose up -d --build
 3. VS Code vous connecte directement dans `spark-jupyter` (`/workspace`) avec le kernel **`Python 3.15 (PySpark 4.2 + Delta Lake 4.4)`**, Pylance, Ruff, `git`, `jq` et `pytest` prêts à l'emploi.
 
 ### Option B — Mode Léger depuis l'hôte *(idéal pour les PC portables à 8 Go de RAM)*
-1. Lancez `task up`.
-2. Ouvrez un notebook dans `notebooks/`, cliquez sur **Select Kernel** → **Existing Jupyter Server...** → `http://localhost:8888/?token=bigdata`.
+1. **Démarrer le cluster** : Lancez `task up` (ou `docker compose up -d`).
+2. **Ouvrir un notebook** : Ouvrez l'un des notebooks dans `notebooks/` (ex. `J1_HDFS_Ingestion_Bronze.ipynb`).
+3. **Se connecter au serveur Jupyter distant** :
+   - En haut à droite du notebook, cliquez sur **Select Kernel** (ou *Select Another Kernel...*).
+   - Sélectionnez **Existing Jupyter Server...**.
+   - Collez l'URL : `http://localhost:8888/?token=bigdata` (ou `http://127.0.0.1:8888/?token=bigdata`) et appuyez sur **Entrée** (laissez le nom par défaut et validez avec **Entrée**).
+4. **Sélectionner le kernel distant PySpark** :
+   - Choisissez **`Python 3.15 (PySpark 4.2 + Delta Lake 4.4)`** dans la liste des kernels du serveur distant. Vos cellules s'exécutent désormais directement dans le conteneur distribué `spark-jupyter` sans mobiliser les ressources d'un interpréteur local sur votre machine hôte !
+
+> [!TIP]
+> **Alternative 100% navigateur (zéro surcharge VS Code)** : Vous pouvez également ouvrir directement **http://localhost:8888/?token=bigdata** dans votre navigateur (Chrome, Firefox, Edge) pour exécuter vos notebooks dans l'interface JupyterLab native sans aucune configuration côté hôte.
 
 ---
 

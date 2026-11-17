@@ -1,12 +1,10 @@
 {
   // ==========================================
-  // PYTHON & KERNEL JUPYTER (Conteneur spark-jupyter)
+  // PYTHON & KERNEL JUPYTER
   // ==========================================
-  "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "python.terminal.activateEnvironment": false,
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.indexing": true,
-
   "jupyter.notebookFileRoot": "${workspaceFolder}",
   "jupyter.askForKernelRestart": false,
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
@@ -14,7 +12,6 @@
   "notebook.stickyScroll.enabled": true,
   "notebook.output.textLineLimit": 50,
   "notebook.formatOnSave.enabled": false,
-
   // ==========================================
   // QUALITÉ DE CODE & FORMATAGE (Ruff)
   // ==========================================
@@ -27,7 +24,6 @@
     }
   },
   "ruff.lineLength": 108,
-
   // ==========================================
   // CONFORT ÉDITEUR & FICHIERS DE CONFIG HADOOP / DOCKER
   // ==========================================
