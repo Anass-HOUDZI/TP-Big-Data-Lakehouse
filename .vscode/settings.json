@@ -4,6 +4,10 @@
   // ==========================================
   "python.terminal.activateEnvironment": false,
   "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+    "reportMissingModuleSource": "none"
+  },
   "python.analysis.indexing": true,
   "jupyter.notebookFileRoot": "${workspaceFolder}",
   "jupyter.askForKernelRestart": false,

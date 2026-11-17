@@ -23,3 +23,9 @@ dependencies = [
     "ruff>=0.17",
     "pytest>=9.2",
 ]
+
+[tool.pyrefly]
+# En mode léger depuis l'hôte (kernel Jupyter distant dans Docker), les paquets Big Data
+# (pyspark, delta, kagglehub, etc.) sont installés dans le conteneur et non sur le Python hôte.
+ignore-missing-imports = ["*"]
+
